@@ -22,7 +22,7 @@
   font-size: 25px;
   color: var(--main-color);
   background-color: var(--background);
-  border: solid 0.5px black;
+  border: solid 0.5px rgb(0, 191, 255);
   transition: border-width 0.4s linear;
 }
 .button-wrapper:hover {
@@ -42,7 +42,7 @@
   border-radius: 30px 30px 0 0;
 }
 .operator {
-  background-color: rgb(200, 100, 124);
+  background-color: rgb(0, 191, 255);
   color: #fff;
   font-weight: bold;
 }
