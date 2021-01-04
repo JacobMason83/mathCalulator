@@ -1,5 +1,6 @@
-import { e } from "mathjs";
 import React, { Component } from "react";
+import * as math from "mathjs";
+
 import Button from "./components/button";
 import Input from "./components/input";
 
@@ -23,6 +24,11 @@ export default class App extends Component {
       input: input + value
     });
   };
+  handleEqual = () => {
+    this.setState({
+      input: math.evaluate(this.state.input)
+    });
+  };
   renderButtons = () => {
     return this.state.ops.map((row) => {
       return (
@@ -43,6 +49,17 @@ export default class App extends Component {
         {/* row of buttons  */}
         {this.renderButtons()}
         {/* clear and equal buttons  */}
+        <div className="row">
+          <Button
+            label="clear-btn"
+            handleClick={() => this.setState({ input: "" })}
+          >
+            Clear
+          </Button>
+          <Button label="equal-btn" handleClick={this.handleEqual}>
+            =
+          </Button>
+        </div>
       </div>
     );
   }
