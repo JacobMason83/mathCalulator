@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Calculator from "./components/calculator";
+import Button from "./components/button";
 
 export default class App extends Component {
   constructor() {
@@ -20,7 +20,7 @@ export default class App extends Component {
       return (
         <div className="row">
           {row.map((digit) => {
-            return <button className="button">{digit}</button>;
+            return <Button>{digit}</Button>;
           })}
         </div>
       );
@@ -34,7 +34,6 @@ export default class App extends Component {
         {/* row of buttons  */}
         {this.renderButtons()}
         {/* clear and equal buttons  */}
-        <Calculator />
       </div>
     );
   }
