@@ -1,6 +1,7 @@
 import { e } from "mathjs";
 import React, { Component } from "react";
 import Button from "./components/button";
+import Input from "./components/input";
 
 export default class App extends Component {
   constructor() {
@@ -38,7 +39,7 @@ export default class App extends Component {
     return (
       <div className="App">
         {/* {input button } */}
-        <div className="input">{this.state.input}</div>
+        <Input input={this.state.input} />
         {/* row of buttons  */}
         {this.renderButtons()}
         {/* clear and equal buttons  */}
